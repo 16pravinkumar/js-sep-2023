@@ -86,3 +86,17 @@ console.log(typeof anotherId);
 
 
 
+
+console.log("***************************************************************************")
+
+// stack is used for primitive and heap is used for non-primitive 
+
+// jab koi memeory stack ke andar initialize kiya jata hai tab uska copy banta hai
+// aur voh dushre value ke pass jata hai original nhi jata 
+// e.g
+  let myName = "Pravin";
+  let myAnotherName = myName; //myName meh joh data hai uska copy myAnotherName meh a jayega i.e myAnotherName = "Pravin"
+  myAnotherName = "Sharma" // idr hum myAnotherName ke data ko change kar rhye hai per humare original data meh kuch changes nhi ho ga i.e myName meh "Pravin " he rhye ga 
+  console.log(myName);
+  console.log(myAnotherName);
+
