@@ -1,0 +1,93 @@
+const marvel_heros = ["thor", "Ironman", "spiderman"]
+const dc_heros = ["superman", "flash", "batman"]
+
+// marvel_heros.push(dc_heros)
+
+// console.log(marvel_heros);
+// console.log(marvel_heros[3][1]);
+
+// const allHeros = marvel_heros.concat(dc_heros)
+// console.log(allHeros);
+
+const all_new_heros = [...marvel_heros, ...dc_heros]
+
+// console.log(all_new_heros);
+
+const another_array = [1, 2, 3, [4, 5, 6,[99,88,77,[55,66,44,["Pravin","kumar"]]]], 7, [6, 7, [4, 5]]]
+
+const real_another_array = another_array.flat(Infinity)
+console.log(real_another_array);
+
+
+
+console.log(Array.isArray("Hitesh"))
+console.log(Array.from("Hitesh"))
+console.log(Array.from({name: "hitesh"})) // interesting
+
+const obj = {name: "hitesh",degree:['betch','12th pass']};
+const nameArray = Array.from(Object.keys(obj)); //o/p = ['name','degree']
+const nameArrays = Object.keys(obj); //o/p = ['name','degree']
+
+const nameArrays_of_values = Object.values(obj); //o/p = ['name','degree']
+
+
+
+console.log("it will print all the keys inthe form of array from obj variable but here it will print ture/false "+Array.isArray(nameArray));
+console.log("it will print all the keys inthe form of array from obj variable  "+nameArray);
+console.log("it will print all the keys inthe form of array from obj variable  "+ Array.isArray(nameArrays));
+
+
+console.log("it will print all the values in the form of array from obj variable  "+ nameArrays_of_values);
+
+
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score3));
+
+console.log("*****************************************")
+
+let marvel = ["thor","Iron Man", "spiderman"]
+let dcs = ["superman","flash", "batman"]
+
+let merges = marvel.concat(dcs);
+console.log(merges)
+
+
+
+// The spread (`...`) and rest (`...`) operators in JavaScript are both denoted by three consecutive dots (`...`), but they are used in different contexts and have different purposes.
+
+// 1. **Spread Operator (`...`)**
+//    The spread operator is used to unpack elements from an array or an object into individual elements. It is commonly used for creating copies of arrays or objects, combining arrays, and spreading elements into function arguments.
+
+//    **Example with Arrays:**
+//    ```javascript
+//    const arr1 = [1, 2, 3];
+//    const arr2 = [...arr1, 4, 5]; // Spread elements of arr1 into arr2
+//    console.log(arr2); // Output: [1, 2, 3, 4, 5]
+//    ```
+
+//    **Example with Objects:**
+//    ```javascript
+//    const obj1 = { a: 1, b: 2 };
+//    const obj2 = { ...obj1, c: 3 }; // Spread properties of obj1 into obj2
+//    console.log(obj2); // Output: { a: 1, b: 2, c: 3 }
+//    ```
+
+// 2. **Rest Parameter (`...`)**
+//    The rest parameter is used to collect multiple function arguments into an array. It allows a function to accept a variable number of arguments, converting them into an array.
+
+//    **Example:**
+//    ```javascript
+//    function sum(...args) {
+//      return args.reduce((total, num) => total + num, 0);
+//    }
+
+//    console.log(sum(1, 2, 3, 4)); // Output: 10
+//    ```
+
+//    In this example, the rest parameter `...args` collects all the arguments passed to the `sum` function into an array.
+
+// In summary, the spread operator is used for expanding elements, often for creating copies or merging, while the rest parameter is used for collecting function arguments into an array within a function. They have different use cases and contexts in JavaScript.
