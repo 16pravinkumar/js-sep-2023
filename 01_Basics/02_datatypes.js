@@ -6,10 +6,10 @@ console.log(3
     +
      3) // code readability should be high
 
-console.log("Hitesh")
+console.log("pravin")
 
 
-let name = "hitesh"
+let name = "pravin"
 let age = 18
 // let isLoggedIn = false
 // let state;
@@ -72,7 +72,7 @@ console.log("*******************************************************************
 
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
+    name: "pravin",
     age: 22,
 }
 
