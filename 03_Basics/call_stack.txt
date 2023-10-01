@@ -1,0 +1,73 @@
+The call stack is a fundamental concept in JavaScript and many other programming languages. It keeps track of the function calls in a program, helping to understand the current point of execution and the order in which functions are called. Let's explain the call stack using a diagram and a step-by-step explanation.
+
+### Call Stack Explanation:
+
+1. **Initial State**:
+   Initially, the call stack is empty.
+
+2. **Function Calls**:
+   As functions are called, they are added to the call stack in the order of invocation.
+
+3. **Function Execution**:
+   Functions are executed in the order they were added to the call stack.
+
+4. **Function Completion**:
+   When a function is completed, it is removed (popped) from the call stack.
+
+### Diagram Explanation:
+
+Let's consider a simple JavaScript example:
+
+```javascript
+function greet() {
+  console.log('Hello!');
+}
+
+function invokeGreet() {
+  greet();
+}
+
+invokeGreet();
+```
+
+#### Steps and Call Stack Visualization:
+
+1. **Initial State**:
+   - Call Stack: Empty
+
+2. **`invokeGreet()` Function Call**:
+   - `invokeGreet()` is called and added to the call stack.
+   - Call Stack:
+     ```
+     invokeGreet
+     ```
+
+3. **`greet()` Function Call from `invokeGreet()`**:
+   - `greet()` is called inside `invokeGreet()` and added to the call stack.
+   - Call Stack:
+     ```
+     invokeGreet
+     greet
+     ```
+
+4. **Execution of `greet()` Function**:
+   - The `greet()` function executes and logs "Hello!" to the console.
+   - Call Stack:
+     ```
+     invokeGreet
+     ```
+
+5. **`greet()` Function Completion**:
+   - The `greet()` function is completed and removed (popped) from the call stack.
+   - Call Stack:
+     ```
+     invokeGreet
+     ```
+
+6. **`invokeGreet()` Function Completion**:
+   - The `invokeGreet()` function is completed and removed (popped) from the call stack.
+   - Call Stack: Empty
+
+After all functions have been executed and completed, the call stack becomes empty.
+
+The call stack helps to keep track of the function calls, their order, and the point in the program's execution. It's crucial for understanding program flow and diagnosing issues like stack overflow errors.
