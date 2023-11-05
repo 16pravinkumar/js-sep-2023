@@ -31,3 +31,4 @@ console.table([accountId, accountEmail, accountPassword, accountCity, accountSta
     // kahi bhi use ho sakta hai |
 // var adds itself to the window |          let const doesn't adds 
 //    object
+
