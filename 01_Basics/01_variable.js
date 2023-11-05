@@ -22,3 +22,12 @@ because of issue in block scope and functional scope
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
 
 
+// let vs const vs var
+//   var                         |          let , const
+// var is there in old js        |          let const are in new js
+//  var function scoped          |          let const braces scoped hota hai 
+    // hota hai => var apne      |   
+    // parent function mein      |
+    // kahi bhi use ho sakta hai |
+// var adds itself to the window |          let const doesn't adds 
+//    object
